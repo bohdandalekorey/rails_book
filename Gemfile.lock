@@ -124,6 +124,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     pg (1.2.3)
     public_suffix (4.0.5)
+    puma (3.12.6)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -228,6 +229,7 @@ DEPENDENCIES
   mini_backtrace
   minitest-reporters
   pg
+  puma
   rails (~> 5.2.3)
   rails-controller-testing
   sass-rails (~> 5.0)
