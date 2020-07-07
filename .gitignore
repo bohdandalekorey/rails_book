@@ -34,3 +34,5 @@
 config/database.yml
 db/schema.rb
 .env
+
+/public/uploads
