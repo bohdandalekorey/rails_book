@@ -1,4 +1,5 @@
 <% provide(:title, @title) %>
+
 <div class='row'>
   <aside class='col-md-4'>
     <section class='user_info'>
@@ -12,14 +13,11 @@
 
       <% if @users.any? %>
         <div class='user_avatars'>
-
           <% @users.each do |user| %>
             <%= link_to gravatar_for(user, size: 30), user %>
           <% end %>
-
         </div>
       <% end %>
-
     </section>
   </aside>
   <div class='col-md-8'>
@@ -31,6 +29,5 @@
       </ul>
       <%= will_paginate %>
     <% end %>
-
   </div>
 </div>

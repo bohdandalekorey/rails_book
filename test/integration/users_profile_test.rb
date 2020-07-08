@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UsersProfileTest < ActionDispatch::IntegrationTest
-    include ApplicationHelper
+  include ApplicationHelper
 
   def setup
     @user = users(:michael)
@@ -19,6 +19,5 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     @user.microposts.paginate(page: 1).each do |micropost|
       assert_match micropost.content, response.body
     end
-
   end
 end
