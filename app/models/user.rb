@@ -43,6 +43,7 @@ class User < ActiveRecord::Base
     return false if digest.nil?
 
     BCrypt::Password.new(digest).is_password?(token)
+
   end
 
   def forget
