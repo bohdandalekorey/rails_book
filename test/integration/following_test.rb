@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class FollowingTest < ActionDispatch::IntegrationTest
-
   def setup
     @user = users(:michael)
     @other = users(:archer)
@@ -13,7 +12,6 @@ class FollowingTest < ActionDispatch::IntegrationTest
     assert_difference '@user.following.count', 1 do
       post relationships_path, followed_id: @other.id
     end
-
   end
 
   test 'should follow a user with Ajax' do
@@ -21,7 +19,6 @@ class FollowingTest < ActionDispatch::IntegrationTest
     assert_difference '@user.following.count', 1 do
       xhr :post, relationships_path, followed_id: @other.id
     end
-
   end
 
   test 'should unfollow a user the standard way' do
@@ -31,7 +28,6 @@ class FollowingTest < ActionDispatch::IntegrationTest
     assert_difference '@user.following.count', -1 do
       delete relationship_path(relationship)
     end
-
   end
 
   test 'should unfollow a user with Ajax' do
@@ -41,6 +37,5 @@ class FollowingTest < ActionDispatch::IntegrationTest
     assert_difference '@user.following.count', -1 do
       xhr :delete, relationship_path(relationship)
     end
-
   end
 end
